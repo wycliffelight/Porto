@@ -1,3 +1,11 @@
 # https://www.robotstxt.org/robotstxt.html
+# Allow all search engines to crawl the site
 User-agent: *
-Disallow:
+Allow: /
+
+Disallow: /static/
+Disallow: /*?*
+
+Host: https://www.matthewlight.dev
+
+Sitemap: https://www.matthewlight.dev/sitemap.xml
