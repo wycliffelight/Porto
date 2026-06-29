@@ -43,7 +43,7 @@ const HeroSection = ({ threeCanvasRef, particlesCanvasRef }) => {
               className="font-body text-xs tracking-[0.3em] uppercase mb-6 glow-cyan"
               style={{ color: 'var(--cyan)', opacity: 0.85 }}
             >
-              Multimedia · 3D Design · Motion
+              Multimedia · 3D Design
             </p>
 
             <h1

@@ -251,6 +251,7 @@ const ProjectsCubeSection = () => {
               <span style={{ color: 'var(--indigo)' }}>Experiments</span>
             </h2>
             
+            {/* Temporary disabled
             <Link
               to="/works"
               className="flex items-center gap-2 font-body text-sm font-medium transition-all duration-300 mb-1 pointer-events-auto"
@@ -266,7 +267,7 @@ const ProjectsCubeSection = () => {
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M5 12h14M12 5l7 7-7 7"/>
               </svg>
-            </Link>
+            </Link> */}
           </div>
           
           <div
@@ -298,6 +299,7 @@ const ProjectsCubeSection = () => {
         />
       </div>
 
+      {/* Temporary disabled
       <div className="pb-24 pt-12 text-center relative z-10">
         <Link
           to="/works"
@@ -323,7 +325,7 @@ const ProjectsCubeSection = () => {
           </svg>
           Explore All Works
         </Link>
-      </div>
+      </div> */}
     </section>
   );
 };
