@@ -3,7 +3,6 @@
 User-agent: *
 Allow: /
 
-Disallow: /static/
 Disallow: /*?*
 
 Host: https://www.matthewlight.dev
