@@ -1,0 +1,11 @@
+{
+    "$schema": "https://agentskills.io/v0.2.0/schema.json",
+    "skills": [
+      {
+        "name": "webmcp-portfolio-tools",
+        "type": "webmcp",
+        "description": "Exposes frontend user-interface capabilities like PDF profile exporter to browser-integrated AI agents.",
+        "url": "https://www.matthewlight.dev/"
+      }
+    ]
+  }

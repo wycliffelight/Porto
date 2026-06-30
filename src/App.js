@@ -1,4 +1,4 @@
-import React, { useRef, useState, useCallback } from 'react';
+import React, { useRef, useState, useCallback, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import HeroSection from './components/HeroSection';
@@ -40,6 +40,39 @@ function App() {
       setIsExporting(false);
     }
   }, [isExporting]);
+
+  useEffect(() => {
+    if (typeof navigator !== 'undefined' && navigator.modelContext && navigator.modelContext.provideContext) {
+      try {
+        const unregister = navigator.modelContext.provideContext({
+          tools: [
+            {
+              name: "export_portfolio_pdf",
+              description: "Generates and automatically triggers a download of Matthew Light's full professional portfolio as a high-quality PDF document.",
+              inputSchema: {
+                type: "object",
+                properties: {}
+              },
+              execute: async () => {
+                try {
+                  await handleExportPDF();
+                  return { success: true, message: "PDF generation started successfully." };
+                } catch (err) {
+                  return { success: false, error: err.message || "Failed to export PDF" };
+                }
+              }
+            }
+          ]
+        });
+
+        return () => {
+          if (typeof unregister === 'function') unregister();
+        };
+      } catch (e) {
+        console.error("Failed to register WebMCP context:", e);
+      }
+    }
+  }, [handleExportPDF]);
 
   return (
     <Router>
